@@ -939,6 +939,8 @@ GameObject:
   - component: {fileID: 1559879509}
   - component: {fileID: 1559879513}
   - component: {fileID: 1559879510}
+  - component: {fileID: 1559879515}
+  - component: {fileID: 1559879514}
   m_Layer: 0
   m_Name: Giant
   m_TagString: Untagged
@@ -974,6 +976,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   giant: {fileID: 1559879508}
+  scaleSize: 2
+  pullZone: {fileID: 754085399}
+  rope: {fileID: 524314990}
+  speed: 1
+  strength: 10
 --- !u!212 &1559879513
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1026,6 +1033,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1559879514
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559879508}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &1559879515
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559879508}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1001 &3185938446688010772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1040,7 +1109,7 @@ PrefabInstance:
       objectReference: {fileID: 524314990}
     - target: {fileID: 4240615200706210784, guid: 291479faeed1cb1428119e8ffdf7261e, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4240615200706210784, guid: 291479faeed1cb1428119e8ffdf7261e, type: 3}
       propertyPath: pullZone
@@ -1165,7 +1234,7 @@ PrefabInstance:
       objectReference: {fileID: 754085399}
     - target: {fileID: 1978811877411118072, guid: 82854bf54b0de7e458a62c0d4c65f555, type: 3}
       propertyPath: strength
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4743568228895619280, guid: 82854bf54b0de7e458a62c0d4c65f555, type: 3}
       propertyPath: m_Name

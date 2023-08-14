@@ -8,8 +8,6 @@ public class PlayerUnit : MonoBehaviour
     public GameObject rope;
     public int speed;
     public float strength;
-
-
     private float distance;
 
     void Start()
@@ -17,7 +15,7 @@ public class PlayerUnit : MonoBehaviour
 
     }
 
-    void Update()
+    public void Update()
     {
         distance = Vector2.Distance(transform.position, pullZone.transform.position);
         Vector2 direction = pullZone.transform.forward - transform.position;
